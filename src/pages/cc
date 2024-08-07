@@ -1,0 +1,85 @@
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FaChevronDown } from 'react-icons/fa';
+import logo from '../assets/LogoVBC_Black.png'; // Assicurati di avere il logo in questa directory
+
+const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    const handleMouseEnter = () => {
+        setDropdownOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setDropdownOpen(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <>
+            <nav
+                className={fixed w-full top-0 z-20 transition-all duration-300 ${isScrolled ? 'bg-white bg-opacity-90 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-sm bg-white/60'}}>
+                <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+                    <div className="flex items-center">
+                        <img src={logo} alt="Logo" className="h-10"/>
+                    </div>
+                    <ul className="flex space-x-6 items-center">
+                        <li><Link to="/" className="text-gray-800 hover:text-gray-600">Home</Link></li>
+                        <li className="relative"
+                            onMouseEnter={handleMouseEnter}
+                        >
+                            <button
+                                className="flex items-center text-gray-800 hover:text-gray-600"
+                            >
+                                Società <FaChevronDown className="ml-1"/>
+                            </button>
+                            {dropdownOpen && (
+                                <ul className="absolute top-full mt-2 right-0 w-48 bg-white shadow-md rounded-md"
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <li>
+                                        <Link to="/storia"
+                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Storia</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/direttivo"
+                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Direttivo</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/staff"
+                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Staff</Link>
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
+                        <li><Link to="/stravalesturo" className="text-gray-800 hover:text-gray-600">Stra Val
+                            Esturo</Link></li>
+                        <li><Link to="/squadre" className="text-gray-800 hover:text-gray-600">Squadre</Link></li>
+                        <li><Link to="/news" className="text-gray-800 hover:text-gray-600">News</Link></li>
+
+                        <li><Link to="/contatti"
+                                  className="text-white bg-black px-4 py-2 rounded-full hover:bg-gray-800">Contatti</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </>
+    );
+};
+
+export default Navbar;
