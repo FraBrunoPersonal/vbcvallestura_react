@@ -89,7 +89,7 @@ const Navbar = () => {
                         <li><Link to="/stravalesturo" className="block px-4 py-2 md:p-0 text-gray-800 hover:text-gray-600">Stra Val Esturo</Link></li>
                         <li><Link to="/squadre" className="block px-4 py-2 md:p-0 text-gray-800 hover:text-gray-600">Squadre</Link></li>
                         <li><Link to="/news" className="block px-4 py-2 md:p-0 text-gray-800 hover:text-gray-600">News</Link></li>
-                        <li><Link to="/contatti" className="text-white bg-black px-4 py-2 rounded-full hover:bg-gray-800">Contatti</Link></li>
+                        <li><Link to="/contatti" className="block text-white bg-black px-4 py-2 rounded-full hover:bg-gray-800">Contatti</Link></li>
                     </ul>
                 </div>
             </nav>

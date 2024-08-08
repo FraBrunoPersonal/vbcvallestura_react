@@ -1,10 +1,10 @@
-import fotoFondatori from '../assets/fondatoriVbcValleStura.jpg'; // Assicurati di avere il logo in questa directory
+import fotoFondatori from '../assets/fondatoriVbcValleStura.png'; // Assicurati di avere il logo in questa directory
 
 const Storia = () => {
     return (
         <>
-            <div className="container mx-auto px-16 py-40 overflow-x-hidden overflow-y-auto">
-                <h1 className="text-4xl font-bold mb-8 text-gray-800">Storia</h1>
+            <div className="container mx-auto lg:my-auto sm:my-auto my-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-20 lg:py-40 overflow-x-hidden overflow-y-auto">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-800">Storia</h1>
 
                 <div className="flex justify-center mb-8">
                     <figure className="max-w-lg">

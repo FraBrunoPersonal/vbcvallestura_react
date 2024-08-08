@@ -3,8 +3,8 @@ import {SiGooglemaps} from "react-icons/si";
 
 const Contatti = () => {
     return (
-        <div className="container mx-auto px-16 py-40">
-            <h1 className="text-4xl font-bold mb-8 text-gray-800">Contatti</h1>
+        <div className="container mx-auto lg:my-auto sm:my-auto my-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-20 lg:py-40 overflow-x-hidden overflow-y-auto">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-800">Contatti</h1>
             <div className="grid md:grid-cols-2 gap-8">
                 <div>
                     <h2 className="text-2xl font-semibold mb-4 text-gray-700">V.B.C. Valle Stura</h2>
