@@ -34,7 +34,7 @@ const Direttivo = () => {
                     </figure>
                 </div>
 
-                <div className="grid gap-4 sm:gap-6 lg:gap-8">
+                <div className="grid gap-4 sm:gap-6 lg:gap-8 lg:my-20 md:my-20">
                     {/* Presidente */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                         {/* Spazio vuoto a sinistra */}

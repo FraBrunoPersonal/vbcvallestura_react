@@ -80,8 +80,8 @@ const Navbar = () => {
                                               className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Direttivo</Link>
                                     </li>
                                     <li>
-                                        <Link to="/staff"
-                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Staff</Link>
+                                        <Link to="/staffTecnico"
+                                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:rounded-md">Staff Tecnico</Link>
                                     </li>
                                 </ul>
                             )}

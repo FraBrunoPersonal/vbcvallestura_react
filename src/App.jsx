@@ -8,6 +8,8 @@ import Contatti from "./pages/Contatti.jsx";
 import Squadre from "./pages/Squadre.jsx";
 import News from "./pages/News.jsx";
 import StraValEsturo from "./pages/StraValEsturo.jsx";
+import StaffTecnico from "./pages/StaffTecnico.jsx";
+import Footer from "./pages/Footer.jsx";
 
 
 export default function App() {
@@ -19,11 +21,13 @@ export default function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/storia" element={<Storia />} />
                     <Route path="/direttivo" element={<Direttivo />} />
+                    <Route path="/staffTecnico" element={<StaffTecnico />} />
                     <Route path="/stravalesturo" element={<StraValEsturo />} />
                     <Route path="/squadre" element={<Squadre />} />
                     <Route path="/news" element={<News />} />
                     <Route path="/contatti" element={<Contatti />} />
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </>
 
